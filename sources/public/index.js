@@ -31,8 +31,8 @@ document.querySelector("#getdata").addEventListener("click", function () {
 
 function display() {
 
-    let url = 'http://192.168.137.1:8080/find';
-    fetch("http://localhost:3000/find", {
+    let url = `http://localhost:${process.env.PORT}/find`;
+    fetch(url, {
 
         // Adding method type
         method: "POST",
