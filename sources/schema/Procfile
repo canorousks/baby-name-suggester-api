@@ -1,1 +1,1 @@
-web: nodemon init
+web: nodemon sources/app.js
