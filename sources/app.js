@@ -3,8 +3,9 @@ import cors from 'cors';
 import routes from './routes/babyname.route.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-
+import path from "path";
 const app = express();
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 var corsOption = {
@@ -14,6 +15,8 @@ var corsOption = {
 app.use(cors());
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded({ extended: true }));
 
