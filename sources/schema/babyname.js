@@ -1,12 +1,25 @@
-class BabyName {
-    constructor(data) {
-        this.name = data.name;
-        this.start = data.start;
-        this.gender = data.gender;
-        this.meaning = data.meaning;
-        this.pythagoras = data.pythagoras;
-        this.chaldean = data.chaldeam;
-    }
-}
+import mongoose from 'mongoose';
+// import { config } from '../config.js';
 
-export default BabyName;
+const babyNameSchema = new mongoose.Schema({
+  name: {
+    type: String,
+  },
+  pythagorean: {
+    type:Number,
+  },
+  chaldean: {
+    type:Number,
+  },
+  gender: {
+    type: String,
+  },
+  category: {
+    type: String,
+  },
+  first_letter: {
+    type: String,
+  }
+});
+
+export default babyNameSchema;

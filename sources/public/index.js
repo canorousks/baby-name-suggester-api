@@ -14,7 +14,7 @@ document.querySelector("#getdata").addEventListener("click", function () {
     var type = document.getElementById("algorithm_input").value
     if (type == 1 || type == 3) data['pythagorean'] = count;
     if (type == 2 || type == 3) data['chaldean'] = count;
-    if(data.gender = 'all') data.gender = null
+    if(data.gender === 'all') data.gender = null
 
     console.log(data)
     display();
