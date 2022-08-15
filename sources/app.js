@@ -10,7 +10,7 @@ const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 var corsOption = {
-    origin: ["http://localhost:4000","https://baby-name-suggester.herokuapp.com/"]
+    origin: ["http://localhost:4000","https://baby-name-suggester.herokuapp.com"]
 };
 
 app.use(cors(corsOption));
